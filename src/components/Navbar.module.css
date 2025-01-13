@@ -64,3 +64,20 @@
     -o-border-radius: 6px;
   }
 }
+
+.nav.scroll {
+  background-color: #fafafa;
+}
+
+.nav.scroll p {
+  color: #12273df2 !important;
+}
+.nav.scroll svg {
+  color: #12273df2;
+}
+
+@media (min-width: 992px) {
+  .nav.scroll a {
+    color: #12273df2 !important;
+  }
+}

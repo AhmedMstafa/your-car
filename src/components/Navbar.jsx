@@ -6,11 +6,24 @@ import classes from './Navbar.module.css';
 import { useState } from 'react';
 export default function Navbar() {
   const [isNavVisable, setNavVisiblity] = useState(false);
+  const [inScroll, setInScroll] = useState(false);
+
   function toggleNavHandler() {
     setNavVisiblity((prev) => !prev);
   }
+
+  function scrollHandler() {
+    window.scrollY > 50 ? setInScroll(true) : setInScroll(false);
+  }
+
+  window.addEventListener('scroll', scrollHandler);
+
   return (
-    <nav className={`${classes.nav} position-fixed top-0 w-100`}>
+    <nav
+      className={`${classes.nav} ' '  ${
+        inScroll ? classes.scroll : ' '
+      } position-fixed top-0 w-100`}
+    >
       <Container className="mt-auto mb-auto">
         <div className="d-flex align-items-center">
           <p className="m-0 fs-4 fw-medium text-light">
@@ -66,11 +79,11 @@ export default function Navbar() {
             </ul>
             <button
               onClick={toggleNavHandler}
-              className="btn ms-auto d-lg-none text-light"
+              className="btn-nav btn ms-auto d-lg-none text-light"
             >
               <FontAwesomeIcon icon={faBars} fontSize={25} />
             </button>
-            <button className="btn text-light">
+            <button className="btn-cart btn text-light">
               <FontAwesomeIcon icon={faCartShopping} fontSize={25} />
             </button>
           </div>
