@@ -9,4 +9,7 @@
 
 body {
   font-family: 'Lora', serif;
+  height: 1000vh;
+  overflow-x: hidden;
+  background: #12273df2;
 }
