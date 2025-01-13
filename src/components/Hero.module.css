@@ -1,0 +1,49 @@
+.hero {
+  background-color: rgb(0 0 0 /20%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets//images/hero-background.png');
+  background-position: center;
+  z-index: -999;
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+}
+
+.hero svg {
+  position: relative;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+@media (max-width: 576px) {
+  .hero p {
+    background-color: rgb(0 0 0 /40%);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 2.441rem;
+  }
+
+  .hero p {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero h1 {
+    font-size: 3.052rem;
+  }
+}
