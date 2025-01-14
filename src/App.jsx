@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import { CartProvider } from './store/CartContext';
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <CartProvider>
         <Navbar />
         <Hero />
+        <About />
       </CartProvider>
     </>
   );
