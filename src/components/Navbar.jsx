@@ -1,9 +1,9 @@
 import Container from 'react-bootstrap/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import classes from './Navbar.module.css';
 import { useState } from 'react';
+import Cart from './Cart';
 export default function Navbar() {
   const [isNavVisable, setNavVisiblity] = useState(false);
   const [inScroll, setInScroll] = useState(false);
@@ -83,9 +83,7 @@ export default function Navbar() {
             >
               <FontAwesomeIcon icon={faBars} fontSize={25} />
             </button>
-            <button className="btn-cart btn text-light">
-              <FontAwesomeIcon icon={faCartShopping} fontSize={25} />
-            </button>
+            <Cart />
           </div>
         </div>
       </Container>

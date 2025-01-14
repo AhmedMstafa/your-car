@@ -1,0 +1,20 @@
+.modal {
+  top: 70px;
+  background: #12273df2;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: calc(100vh - 70px);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40%;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal {
+    width: 20%;
+  }
+}

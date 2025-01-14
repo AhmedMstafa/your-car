@@ -1,10 +1,13 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import { CartProvider } from './store/CartContext';
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
+      <CartProvider>
+        <Navbar />
+        <Hero />
+      </CartProvider>
     </>
   );
 }
