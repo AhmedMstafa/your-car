@@ -1,0 +1,25 @@
+.header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.header::before {
+  content: attr(data-back);
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 5.653rem;
+  color: #fff;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .header::before {
+    font-size: 3.815rem;
+  }
+}
