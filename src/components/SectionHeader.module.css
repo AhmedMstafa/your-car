@@ -14,12 +14,13 @@
   font-weight: bold;
   text-transform: uppercase;
   font-size: 5.653rem;
-  color: #fff;
+  color: var(--color-back);
   z-index: -1;
 }
 
 @media (max-width: 768px) {
   .header::before {
-    font-size: 3.815rem;
+    top: -8px;
+    font-size: 2.441rem;
   }
 }

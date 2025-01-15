@@ -12,7 +12,12 @@ export default function Services() {
     <section className={`${classes.services} pt-5 pb-5`}>
       <Container className="pt-5 pb-5 h-100">
         <div className="pt-5 mt-5">
-          <SectionHeader className="pt-5" title="Services" background />
+          <SectionHeader
+            className="pt-5"
+            title="Services"
+            background
+            color="rgb(235 235 235 )"
+          />
         </div>
         <Row className="row-cols-1 row-cols-md-3 h-100 align-items-center pt-5 mt-5">
           <Col className="text-center">
