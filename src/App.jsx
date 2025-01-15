@@ -4,7 +4,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Cars from './components/Cars';
 import { CartProvider } from './store/CartContext';
-
+import CarsGalary from './components/CarsGalary';
 function App() {
   return (
     <>
@@ -15,6 +15,7 @@ function App() {
           <About />
           <Services />
           <Cars />
+          <CarsGalary />
         </main>
       </CartProvider>
     </>
