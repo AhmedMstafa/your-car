@@ -6,6 +6,7 @@ import Cars from './components/Cars';
 import { CartProvider } from './store/CartContext';
 import CarsGalary from './components/CarsGalary';
 import Testimonials from './components/Testimonials';
+import Brands from './components/Brands';
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           <Cars />
           <CarsGalary />
           <Testimonials />
+          <Brands />
         </main>
       </CartProvider>
     </>
