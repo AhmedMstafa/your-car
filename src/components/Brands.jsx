@@ -13,8 +13,8 @@ export default function Brands() {
       style={{ backgroundColor: '#EBEBEB' }}
       className="pt-3 pb-3 pt-md-4 pb-md-4 pt-lg-5 pb-lg-5"
     >
-      <Container className="">
-        <Row>
+      <Container>
+        <Row className="gx-lg-5">
           <Col>
             <Image
               style={{ height: '100%', objectFit: 'contain' }}
