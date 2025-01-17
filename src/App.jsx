@@ -7,6 +7,7 @@ import { CartProvider } from './store/CartContext';
 import CarsGalary from './components/CarsGalary';
 import Testimonials from './components/Testimonials';
 import Brands from './components/Brands';
+import Footer from './components/Footer';
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
           <Testimonials />
           <Brands />
         </main>
+        <Footer />
       </CartProvider>
     </>
   );
