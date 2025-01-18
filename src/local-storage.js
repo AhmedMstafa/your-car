@@ -1,16 +1,16 @@
-const CART = 'CART';
+const ITEMS_CART = 'ITEMS_CART';
 
-export function updateCartFromLocalStorage(cartData) {
+export function updateItemsCartFromLocalStorage(cartData) {
   const data = JSON.stringify(cartData);
-  window.localStorage.setItem(CART, data);
+  window.localStorage.setItem(ITEMS_CART, data);
 }
 
-export function getCartFromLocalStorage() {
-  const data = JSON.parse(window.localStorage.getItem(CART));
+export function getItemsCartFromLocalStorage() {
+  const data = JSON.parse(window.localStorage.getItem(ITEMS_CART));
 
   return data;
 }
 
-export function deleteCartFromLocalStorage() {
-  window.localStorage.removeItem(CART);
+export function deleteItemsCartFromLocalStorage() {
+  window.localStorage.removeItem(ITEMS_CART);
 }

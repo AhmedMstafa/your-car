@@ -1,12 +1,10 @@
 import {
-  updateCartFromLocalStorage,
-  deleteCartFromLocalStorage,
+  updateItemsCartFromLocalStorage,
+  deleteItemsCartFromLocalStorage,
 } from '../local-storage';
 
 export function toggle(state) {
-  const updatedState = { ...state, isModalVisable: !state.isModalVisable };
-  updateCartFromLocalStorage(updatedState);
-  return updatedState;
+  return { ...state, isModalVisable: !state.isModalVisable };
 }
 
 export function addCar(state, action) {
@@ -34,9 +32,8 @@ export function addCar(state, action) {
     updatedCartItems.cars.push({ ...action.payload, quantity: 1 });
   }
 
-  const updatedState = { ...state, cartItems: { ...updatedCartItems } };
-  updateCartFromLocalStorage(updatedState);
-  return updatedState;
+  updateItemsCartFromLocalStorage(updatedCartItems);
+  return { ...state, cartItems: { ...updatedCartItems } };
 }
 
 export function deleteCar(state, action) {
@@ -67,13 +64,12 @@ export function deleteCar(state, action) {
     updatedCartItems.cars.splice(exsitingCartItem, 1);
   }
 
-  const updatedState = { ...state, cartItems: { ...updatedCartItems } };
-  updateCartFromLocalStorage(updatedState);
-  return updatedState;
+  updateItemsCartFromLocalStorage(updatedCartItems);
+  return { ...state, cartItems: { ...updatedCartItems } };
 }
 
 export function deleteAll(state) {
-  deleteCartFromLocalStorage();
+  deleteItemsCartFromLocalStorage();
   return { ...state, cartItems: { cars: [], totalQuantity: 0 } };
 }
 
@@ -97,7 +93,6 @@ export function deleteSpacificItem(state, action) {
   updatedCartItems.totalQuantity -= exsitingCarData.quantity;
   updatedCartItems.cars.splice(exsitingCartItem, 1);
 
-  const updatedState = { ...state, cartItems: { ...updatedCartItems } };
-  updateCartFromLocalStorage(updatedState);
-  return updatedState;
+  updateItemsCartFromLocalStorage(updatedCartItems);
+  return { ...state, cartItems: { ...updatedCartItems } };
 }

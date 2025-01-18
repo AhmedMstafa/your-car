@@ -1,5 +1,5 @@
 import { createContext, useReducer } from 'react';
-import { getCartFromLocalStorage } from '../local-storage';
+import { getItemsCartFromLocalStorage } from '../local-storage';
 
 import {
   toggle,
@@ -53,16 +53,13 @@ function cartReducer(state, action) {
 }
 
 export function CartProvider({ children }) {
-  const [cart, dispatch] = useReducer(
-    cartReducer,
-    getCartFromLocalStorage() ?? {
-      isModalVisable: false,
-      cartItems: {
-        cars: [],
-        totalQuantity: 0,
-      },
-    }
-  );
+  const [cart, dispatch] = useReducer(cartReducer, {
+    isModalVisable: false,
+    cartItems: getItemsCartFromLocalStorage() ?? {
+      cars: [],
+      totalQuantity: 0,
+    },
+  });
 
   function toggleModal() {
     dispatch({ type: actions.TOGGLE });
