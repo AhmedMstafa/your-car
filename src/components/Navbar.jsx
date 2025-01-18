@@ -30,15 +30,15 @@ export default function Navbar() {
             Your
             <span className="fw-normal">Car</span>
           </p>
-          <div className="d-flex gap-2 ms-auto align-items-center flex-row-reverse flex-lg-row">
+          <div className="d-flex ms-auto gap-0 gap-lg-3 align-items-center flex-row-reverse flex-lg-row">
             <ul
               className={`${
                 isNavVisable ? classes.show : classes.hidden
-              } d-lg-flex m-0 d-flex gap-3 flex-column p-0  flex-lg-row p-lg-0 pt-5 p-ls-0`}
+              } d-lg-flex m-0 d-flex gap-3 gap-md-4 flex-column p-0  flex-lg-row p-lg-0 pt-5 p-ls-0`}
             >
               <li className="mt-5 m-lg-0">
                 <a
-                  className="text-light fw-medium d-block ps-5 pt-3 pb-3 "
+                  className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
                   href="#"
                 >
                   Home
@@ -46,7 +46,7 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  className="text-light fw-medium d-block ps-5 pt-3 pb-3 "
+                  className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
                   href="#"
                 >
                   About
@@ -54,7 +54,7 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  className="text-light fw-medium d-block ps-5 pt-3 pb-3 "
+                  className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
                   href="#"
                 >
                   Services
@@ -62,7 +62,7 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  className="text-light fw-medium d-block ps-5 pt-3 pb-3 "
+                  className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
                   href="#"
                 >
                   Cars
@@ -70,7 +70,7 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  className="text-light fw-medium d-block ps-5 pt-3 pb-3 "
+                  className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
                   href="#"
                 >
                   Contact us

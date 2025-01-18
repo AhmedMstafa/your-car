@@ -1,5 +1,6 @@
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import calsses from './Cart.module.css';
 import { useContext } from 'react';
 import CartContext from '../store/CartContext';
 import Moda from './Modal';
@@ -15,22 +16,12 @@ export default function Cart() {
     <>
       <button
         onClick={handleToggleModal}
-        className="btn-cart btn text-light position-relative"
+        className={`${calsses.cart} ${
+          cart.isModalVisable ? calsses.focus : ''
+        } btn-cart btn text-light position-relative`}
       >
         <FontAwesomeIcon icon={faCartShopping} fontSize={25} />
-        <span
-          style={{
-            backgroundColor: '#F8D7A4',
-            fontFamily: 'var(Nunito Sans)',
-            minWidth: '20px',
-            color: 'var(--main-color)',
-            borderRadius: '2px',
-            fontSize: '12px',
-            padding: '1px 0',
-            right: '10px',
-          }}
-          className="position-absolute top-0 fw-semibold text-center"
-        >
+        <span className="position-absolute top-0 fw-semibold text-center">
           {itemsQuantity}
         </span>
       </button>

@@ -1,0 +1,19 @@
+.cart > span {
+  background-color: #f8d7a4;
+  font-family: var(Nunito Sans);
+  min-width: 20px;
+  color: var(--main-color);
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 1px 0;
+  right: 10px;
+}
+
+.cart.focus > span {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.cart.focus svg {
+  color: var(--main-color);
+}

@@ -42,7 +42,7 @@ export default function ModalItems() {
             fontFamily: 'Nunito Sans',
             width: '200px',
           }}
-          className="mt-auto text-light border-0 d-flex gap-2 justify-content-center align-self-center"
+          className="mt-auto text-light border-0 rounded-0 d-flex gap-2 justify-content-center align-self-center"
         >
           <strong className="fw-normal fs-5">Delete All</strong>
           <FontAwesomeIcon icon={faTrashCan} fontSize={25} />
