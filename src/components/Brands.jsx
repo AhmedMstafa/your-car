@@ -23,6 +23,7 @@ export default function Brands() {
                 style={{ height: '100%', objectFit: 'contain' }}
                 src={Img1}
                 fluid
+                loading="lazy"
               />
             </Col>
             <Col>
@@ -30,6 +31,7 @@ export default function Brands() {
                 style={{ height: '100%', objectFit: 'contain' }}
                 src={Img2}
                 fluid
+                loading="lazy"
               />
             </Col>
             <Col>
@@ -37,6 +39,7 @@ export default function Brands() {
                 style={{ height: '100%', objectFit: 'contain' }}
                 src={Img3}
                 fluid
+                loading="lazy"
               />
             </Col>
             <Col>
@@ -44,6 +47,7 @@ export default function Brands() {
                 style={{ height: '100%', objectFit: 'contain' }}
                 src={Img4}
                 fluid
+                loading="lazy"
               />
             </Col>
           </Row>
@@ -53,6 +57,7 @@ export default function Brands() {
                 style={{ height: '100%', objectFit: 'contain' }}
                 src={Img5}
                 fluid
+                loading="lazy"
               />
             </Col>
             <Col>
@@ -60,6 +65,7 @@ export default function Brands() {
                 style={{ height: '100%', objectFit: 'contain' }}
                 src={Img6}
                 fluid
+                loading="lazy"
               />
             </Col>
             <Col>
@@ -67,6 +73,7 @@ export default function Brands() {
                 style={{ height: '100%', objectFit: 'contain' }}
                 src={Img7}
                 fluid
+                loading="lazy"
               />
             </Col>
             <Col>
@@ -74,6 +81,7 @@ export default function Brands() {
                 style={{ height: '100%', objectFit: 'contain' }}
                 src={Img8}
                 fluid
+                loading="lazy"
               />
             </Col>
           </Row>

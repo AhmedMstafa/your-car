@@ -3,15 +3,16 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 export default function ModalItem({ car, onAdd, onDelete, onDeleteSpecific }) {
-  const [imageSrc, setImageSrc] = useState(null);
+  const [image, setImageSrc] = useState(null);
 
   useEffect(() => {
-    function getImage() {
-      import(car.image)
-        .then((image) => {
-          setImageSrc(image.default);
-        })
-        .catch((err) => console.error('Error loading image', err));
+    async function getImage() {
+      try {
+        const image = await import(car.image);
+        setImageSrc(image.default);
+      } catch (err) {
+        console.error('Error loading image', err);
+      }
     }
 
     getImage();
@@ -63,8 +64,9 @@ export default function ModalItem({ car, onAdd, onDelete, onDeleteSpecific }) {
       <Col className="col-6">
         <Image
           style={{ height: '100%', objectFit: 'contain' }}
-          src={imageSrc}
+          src={image}
           fluid
+          loading="lazy"
         />
       </Col>
     </Row>

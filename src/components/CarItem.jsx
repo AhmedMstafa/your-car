@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { useContext } from 'react';
 import CartContext from '../store/CartContext';
 export default function CartItem({ car }) {
-  const [imageSrc, setImageSrc] = useState(null);
+  const [image, setImageSrc] = useState(null);
   const cart = useContext(CartContext);
   const quantity = cart.cartItems.cars.find(
     (item) => item.name === car.name
@@ -19,12 +19,13 @@ export default function CartItem({ car }) {
   }
 
   useEffect(() => {
-    function getImage() {
-      import(car.image)
-        .then((image) => {
-          setImageSrc(image.default);
-        })
-        .catch((err) => console.error('Error loading image', err));
+    async function getImage() {
+      try {
+        const image = await import(car.image);
+        setImageSrc(image.default);
+      } catch (err) {
+        console.error('Error loading image', err);
+      }
     }
 
     getImage();
@@ -40,7 +41,7 @@ export default function CartItem({ car }) {
         className="border-0"
       >
         <div className="h-50">
-          <Card.Img variant="top" src={imageSrc} />
+          <Card.Img variant="top" src={image} loading="lazy" />
         </div>
         <Card.Body className="d-flex flex-column">
           <Card.Title
