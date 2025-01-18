@@ -24,3 +24,10 @@
     font-size: 3.157rem;
   }
 }
+
+@media (max-width: 576px) {
+  .header::before {
+    top: -3px;
+    font-size: 2.25rem;
+  }
+}
