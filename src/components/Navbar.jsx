@@ -34,7 +34,7 @@ export default function Navbar() {
             <ul
               className={`${
                 isNavVisable ? classes.show : classes.hidden
-              } d-lg-flex m-0 d-flex gap-4 flex-column p-5 pe-0 flex-lg-row p-lg-0`}
+              } d-lg-flex m-0 d-flex gap-3 flex-column p-0  flex-lg-row p-lg-0 pt-5 p-ls-0`}
             >
               <li className="mt-5 m-lg-0">
                 <a

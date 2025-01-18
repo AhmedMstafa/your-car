@@ -69,11 +69,19 @@
   background-color: #fafafa;
 }
 
+.nav.scroll button:last-child svg {
+  color: var(--secondary-color);
+}
+
 .nav.scroll p {
   color: #12273df2 !important;
 }
 .nav.scroll svg {
   color: #12273df2;
+}
+
+.nav.scroll ul li:hover a {
+  color: #fff !important;
 }
 
 @media (min-width: 992px) {
