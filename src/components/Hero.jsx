@@ -5,7 +5,7 @@ import classes from './Hero.module.css';
 
 export default function Hero() {
   return (
-    <div className={`${classes.hero}`}>
+    <div id="home" className={`${classes.hero}`}>
       <Container>
         <Row>
           <Col className="clo-12 col-md-7 col-lg-6 vh-100 ms-auto d-flex flex-column justify-content-center">

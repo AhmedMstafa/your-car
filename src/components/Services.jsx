@@ -9,9 +9,9 @@ import SectionHeader from './SectionHeader';
 import classes from './Services.module.css';
 export default function Services() {
   return (
-    <section className={`${classes.services} pt-5 pb-5`}>
-      <Container className="pt-5 pb-5 h-100">
-        <div className="pt-5 mt-5">
+    <section id="services" className={`${classes.services} pt-5 pb-5`}>
+      <Container>
+        <div className="pt-5">
           <SectionHeader
             className="pt-5"
             title="Services"
@@ -19,7 +19,7 @@ export default function Services() {
             color="rgb(235 235 235 )"
           />
         </div>
-        <Row className="row-cols-1 row-cols-md-3 h-100 align-items-center pt-5 mt-5">
+        <Row className="row-cols-1 row-cols-md-3 h-100 align-items-center pt-5 gy-3 gy-md-0 gx-md-2 gx-lg-5">
           <Col className="text-center">
             <FontAwesomeIcon icon={faSplotch} fontSize={70} />
             <h5 className="pt-4 pb-2">Car sales</h5>

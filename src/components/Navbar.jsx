@@ -39,7 +39,7 @@ export default function Navbar() {
               <li className="mt-5 m-lg-0">
                 <a
                   className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
-                  href="#"
+                  href="#home"
                 >
                   Home
                 </a>
@@ -47,7 +47,7 @@ export default function Navbar() {
               <li>
                 <a
                   className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
-                  href="#"
+                  href="#about"
                 >
                   About
                 </a>
@@ -55,7 +55,7 @@ export default function Navbar() {
               <li>
                 <a
                   className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
-                  href="#"
+                  href="#services"
                 >
                   Services
                 </a>
@@ -63,7 +63,7 @@ export default function Navbar() {
               <li>
                 <a
                   className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
-                  href="#"
+                  href="#cars"
                 >
                   Cars
                 </a>
@@ -71,7 +71,7 @@ export default function Navbar() {
               <li>
                 <a
                   className="text-light fw-bolder d-block ps-5 pt-3 pb-3 "
-                  href="#"
+                  href="#contact-us"
                 >
                   Contact us
                 </a>

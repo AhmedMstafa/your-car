@@ -3,7 +3,7 @@ import Img from '../assets/images/about-car-back.png';
 import classes from './About.module.css';
 export default function About() {
   return (
-    <section className={`${classes.about} pt-5 pb-5`}>
+    <section id="about" className={`${classes.about} pt-5 pb-5`}>
       <Container className="h-100">
         <Row className="h-100">
           <Col className="mt-auto mb-auto">
