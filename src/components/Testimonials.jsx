@@ -7,7 +7,7 @@ export default function Testimonials() {
       style={{ backgroundColor: 'var(--main-color)' }}
       className="pt-5 pb-5 "
     >
-      <Container className="p-0 pt-5 ">
+      <Container className="p-0">
         <div className="pt-5 text-light">
           <SectionHeader
             title="Testimonials"

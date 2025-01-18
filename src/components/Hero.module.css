@@ -1,5 +1,6 @@
 .hero {
   background-color: rgb(0 0 0 /20%);
+  overflow-y: hidden;
 }
 
 .hero::before {
@@ -7,6 +8,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
   background-image: url('../assets//images/hero-background.png');
   background-position: center;
   z-index: -999;
