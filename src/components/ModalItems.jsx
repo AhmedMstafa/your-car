@@ -34,17 +34,20 @@ export default function ModalItems() {
           onDeleteSpecific={delteSpecificItemHandler}
         />
       ))}
-      <Button
-        onClick={clearCartHandler}
-        style={{
-          background: 'var(--secondary-color)',
-          fontFamily: 'Nunito Sans',
-        }}
-        className="mt-auto text-light border-0 d-flex gap-2 justify-content-center pt-2 pb-2 "
-      >
-        <strong className="fw-normal fs-5">Delete All</strong>
-        <FontAwesomeIcon icon={faTrashCan} fontSize={25} />
-      </Button>
+      {cart.cartItems.cars.length > 0 && (
+        <Button
+          onClick={clearCartHandler}
+          style={{
+            background: 'var(--secondary-color)',
+            fontFamily: 'Nunito Sans',
+            width: '200px',
+          }}
+          className="mt-auto text-light border-0 d-flex gap-2 justify-content-center align-self-center"
+        >
+          <strong className="fw-normal fs-5">Delete All</strong>
+          <FontAwesomeIcon icon={faTrashCan} fontSize={25} />
+        </Button>
+      )}
     </div>
   );
 }
