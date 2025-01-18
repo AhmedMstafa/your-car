@@ -14,7 +14,7 @@ import classes from './Footer.module.css';
 
 export default function Footer() {
   return (
-    <footer className={`${classes.footer} pt-5 pb-5`}>
+    <footer id="contact-us" className={`${classes.footer} pt-5 pb-5`}>
       <Container>
         <Row className="row-cols-1 row-cols-md-3 text-center text-md-start justify-content-md-center gap-3 gap-md-0">
           <Col>
