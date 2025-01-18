@@ -103,7 +103,7 @@ export default function Footer() {
           </div>
           <hr className="opacity-100 ms-auto me-auto " />
           <small className="d-block text-center">
-            &copy; Copyright 2023 - <sapn className="fw-bold">YourCar</sapn> All
+            &copy; Copyright 2023 - <span className="fw-bold">YourCar</span> All
             right reserved
           </small>
         </div>
