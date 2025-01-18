@@ -15,7 +15,7 @@ export default function ModalItem({ car, onAdd, onDelete, onDeleteSpecific }) {
     }
 
     getImage();
-  }, []);
+  }, [car.image]);
 
   return (
     <Row

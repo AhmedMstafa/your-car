@@ -28,7 +28,7 @@ export default function CartItem({ car }) {
     }
 
     getImage();
-  }, []);
+  }, [car.image]);
 
   return (
     <>
