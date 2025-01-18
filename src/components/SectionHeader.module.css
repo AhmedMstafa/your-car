@@ -1,0 +1,33 @@
+.header {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.header::before {
+  content: attr(data-back);
+  position: absolute;
+  top: -15px;
+  left: var(--position-back);
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 5.653rem;
+  color: var(--color-back);
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .header::before {
+    top: -8px;
+    font-size: 3.157rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header::before {
+    top: -3px;
+    font-size: 2.25rem;
+  }
+}

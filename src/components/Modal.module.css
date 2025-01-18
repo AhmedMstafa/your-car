@@ -1,0 +1,16 @@
+.modal {
+  top: 70px;
+  background: #12273df2;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: calc(100vh - 70px);
+  z-index: 999;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 450px;
+  }
+}
