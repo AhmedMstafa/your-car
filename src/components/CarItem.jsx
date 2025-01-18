@@ -2,20 +2,41 @@ import { Card, Button, ButtonGroup } from 'react-bootstrap';
 import { faSuitcase, faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState, useEffect } from 'react';
-
+import { useContext } from 'react';
+import CartContext from '../store/CartContext';
 export default function CartItem({ car }) {
   const [imageSrc, setImageSrc] = useState(null);
+  const cart = useContext(CartContext);
+  const quantity = cart.cartItems.cars.find(
+    (item) => item.name === car.name
+  )?.quantity;
+  function addToCartHandler(car) {
+    cart.addCar({ name: car.name, class: car.class, image: car.image });
+  }
+
+  function deleteFromCartHandler(name) {
+    cart.deleteCar(name);
+  }
+
   useEffect(() => {
-    import(car.image)
-      .then((image) => {
-        setImageSrc(image.default);
-      })
-      .catch((err) => console.error('Error loading image', err));
-  }, [car]);
+    function getImage() {
+      import(car.image)
+        .then((image) => {
+          setImageSrc(image.default);
+        })
+        .catch((err) => console.error('Error loading image', err));
+    }
+
+    getImage();
+  }, []);
+
   return (
     <>
       <Card
-        style={{ height: '600px', fontFamily: 'Nunito Sans ' }}
+        style={{
+          height: '600px',
+          fontFamily: 'Nunito Sans ',
+        }}
         className="border-0"
       >
         <div className="h-50">
@@ -58,6 +79,7 @@ export default function CartItem({ car }) {
             </div>
             <ButtonGroup aria-label="Basic example">
               <Button
+                onClick={() => addToCartHandler(car)}
                 style={{ background: '#741906', border: 'none' }}
                 variant="secondary"
               >
@@ -67,9 +89,10 @@ export default function CartItem({ car }) {
                 style={{ width: '30px', color: '#12273D' }}
                 className="align-self-center text-center fs-5"
               >
-                1
+                {quantity ?? 0}
               </div>
               <Button
+                onClick={() => deleteFromCartHandler(car.name)}
                 style={{ background: '#741906', border: 'none' }}
                 variant="secondary"
               >
