@@ -8,26 +8,19 @@
 .header::before {
   content: attr(data-back);
   position: absolute;
-  top: -15px;
   left: var(--position-back);
-  transform: translate(-50%, -50%);
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 5.653rem;
   color: var(--color-back);
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 3.815rem;
+  font-weight: bold;
   z-index: -1;
+  top: 0;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) {
   .header::before {
-    top: -8px;
-    font-size: 3.157rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .header::before {
-    top: -3px;
-    font-size: 2.25rem;
+    font-size: 5.063rem;
   }
 }
