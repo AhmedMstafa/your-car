@@ -35,7 +35,7 @@
 
 .about .images::before {
   content: '';
-  background-image: url('../assets/images/about-car-front.png');
+  background-image: url('/images/about-car-front.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

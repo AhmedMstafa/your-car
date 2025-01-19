@@ -1,22 +1,7 @@
 import { Image, Col, Row, Button, ButtonGroup } from 'react-bootstrap';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useState } from 'react';
 export default function ModalItem({ car, onAdd, onDelete, onDeleteSpecific }) {
-  const [imageSrc, setImageSrc] = useState(null);
-
-  useEffect(() => {
-    function getImage() {
-      import(car.image)
-        .then((image) => {
-          setImageSrc(image.default);
-        })
-        .catch((err) => console.error('Error loading image', err));
-    }
-
-    getImage();
-  }, [car.image]);
-
   return (
     <Row
       style={{ color: 'var(--main-color)' }}
@@ -63,8 +48,9 @@ export default function ModalItem({ car, onAdd, onDelete, onDeleteSpecific }) {
       <Col className="col-6">
         <Image
           style={{ height: '100%', objectFit: 'contain' }}
-          src={imageSrc}
+          src={car.image}
           fluid
+          loading="lazy"
         />
       </Col>
     </Row>
