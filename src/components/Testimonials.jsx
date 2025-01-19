@@ -1,20 +1,13 @@
 import { Container } from 'react-bootstrap';
-import SectionHeader from './SectionHeader';
 import ReviewsSlider from './ReviewsSlider';
+import classes from './Testimonials.module.css';
 export default function Testimonials() {
   return (
-    <section
-      style={{ backgroundColor: 'var(--main-color)' }}
-      className="pt-5 pb-5 "
-    >
+    <section className={`${classes.testimonials} pt-5 pb-5 `}>
       <Container className="p-0">
-        <div className="pt-5 text-light">
-          <SectionHeader
-            title="Testimonials"
-            background
-            color="rgb(235 235 235 / 14%)"
-          />
-        </div>
+        <h3 className="mb-4 mt-5 fs-1 text-light fw-simebold text-center">
+          Testimonials
+        </h3>
         <ReviewsSlider />
       </Container>
     </section>

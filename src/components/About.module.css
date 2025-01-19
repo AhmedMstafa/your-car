@@ -8,7 +8,8 @@
 }
 
 .about h3::before {
-  content: 'ABOUT US';
+  content: 'about us';
+  text-transform: uppercase;
   position: absolute;
   width: 100%;
   font-size: 3.815rem;
