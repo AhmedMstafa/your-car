@@ -1,13 +1,13 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
 
-import Img1 from '../assets/images/logo-1.png';
-import Img2 from '../assets/images/logo-2.png';
-import Img3 from '../assets/images/logo-3.png';
-import Img4 from '../assets/images/logo-4.png';
-import Img5 from '../assets/images/logo-5.png';
-import Img6 from '../assets/images/logo-6.png';
-import Img7 from '../assets/images/logo-7.png';
-import Img8 from '../assets/images/logo-8.png';
+import Img1 from '/images/logo-1.png';
+import Img2 from '/images/logo-2.png';
+import Img3 from '/images/logo-3.png';
+import Img4 from '/images/logo-4.png';
+import Img5 from '/images/logo-5.png';
+import Img6 from '/images/logo-6.png';
+import Img7 from '/images/logo-7.png';
+import Img8 from '/images/logo-8.png';
 
 export default function Brands() {
   return (

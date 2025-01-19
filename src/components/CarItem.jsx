@@ -1,11 +1,9 @@
 import { Card, Button, ButtonGroup } from 'react-bootstrap';
 import { faSuitcase, faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState, useEffect } from 'react';
 import { useContext } from 'react';
 import CartContext from '../store/CartContext';
 export default function CartItem({ car }) {
-  const [image, setImageSrc] = useState(null);
   const cart = useContext(CartContext);
   const quantity = cart.cartItems.cars.find(
     (item) => item.name === car.name
@@ -18,19 +16,6 @@ export default function CartItem({ car }) {
     cart.deleteCar(name);
   }
 
-  useEffect(() => {
-    async function getImage() {
-      try {
-        const image = await import(car.image);
-        setImageSrc(image.default);
-      } catch (err) {
-        console.error('Error loading image', err);
-      }
-    }
-
-    getImage();
-  }, [car.image]);
-
   return (
     <>
       <Card
@@ -41,7 +26,7 @@ export default function CartItem({ car }) {
         className="border-0"
       >
         <div className="h-50">
-          <Card.Img variant="top" src={image} loading="lazy" />
+          <Card.Img variant="top" src={car.image} loading="lazy" />
         </div>
         <Card.Body className="d-flex flex-column">
           <Card.Title

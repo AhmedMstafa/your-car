@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import Img from '../assets/images/about-car-back.png';
+import Img from '/images/about-car-back.png';
 import classes from './About.module.css';
 export default function About() {
   return (
